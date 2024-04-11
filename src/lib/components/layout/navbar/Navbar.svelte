@@ -5,6 +5,7 @@
 		SearchInput,
 		UserMenu
 	} from '$lib/components/common';
+	import { APP_LOGO, APP_NAME, APP_URL } from '$lib/constants/Constant';
 	import { NavBrand, NavHamburger, Navbar } from 'flowbite-svelte';
 
 	let searchValue = '';
@@ -19,16 +20,12 @@
 		<div class="flex items-center justify-start">
 			<NavHamburger onClick={toggle} />
 
-			<NavBrand href="https://flowbite.com">
-				<img
-					src="https://flowbite.s3.amazonaws.com/logo.svg"
-					class="mr-3 h-8"
-					alt="Flowbite Logo"
-				/>
+			<NavBrand href={APP_URL}>
+				<img src={APP_LOGO} class="mr-3 h-8" alt="{APP_NAME} Logo" />
 				<span
 					class="hidden self-center whitespace-nowrap text-2xl font-semibold dark:text-white md:inline"
 				>
-					Flowbite
+					{APP_NAME}
 				</span>
 			</NavBrand>
 

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { APP_LOGO, APP_NAME } from '$lib/constants/Constant';
 	import { Button, Checkbox, Input, Label } from 'flowbite-svelte';
 	import { Register, Section } from 'flowbite-svelte-blocks';
 </script>
@@ -6,8 +7,8 @@
 <Section name="login">
 	<Register href="/login">
 		<svelte:fragment slot="top">
-			<img class="mr-2 h-8 w-8" src="https://flowbite.s3.amazonaws.com/logo.svg" alt="logo" />
-			Flowbite
+			<img class="mr-2 h-8 w-8" src={APP_LOGO} alt="{APP_NAME} Logo" />
+			{APP_NAME}
 		</svelte:fragment>
 
 		<div class="space-y-4 p-6 sm:p-8 md:space-y-6">
