@@ -49,6 +49,10 @@ npm run build
 
 This will create an optimized version of your application in the `.svelte-kit/output` directory, ready to be deployed to a web server.
 
+## Demo
+
+https://svelte-flowbite-boilerplate.vercel.app/
+
 ## Contributing
 
 Contributions are welcome! If you have any ideas, suggestions, or improvements, feel free to open an issue or create a pull request.
