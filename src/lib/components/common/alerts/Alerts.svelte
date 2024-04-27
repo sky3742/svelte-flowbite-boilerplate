@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Notifications } from '$lib/utils';
-	import { removeNotification } from '$lib/utils/notification';
+	import { Alerts } from '$lib/utils';
+	import { removeAlert } from '$lib/utils/alert';
 	import { Toast } from 'flowbite-svelte';
 	import {
 		CheckCircleSolid,
@@ -11,35 +11,35 @@
 </script>
 
 <div class="absolute bottom-0 right-0 grid max-w-sm items-end gap-4 p-8">
-	{#each $Notifications as notification (notification.id)}
+	{#each $Alerts as alert (alert.id)}
 		<Toast
-			dismissable={!!notification.manualClose}
-			color={notification.type}
-			on:close={() => removeNotification(notification.id)}
+			dismissable={!!alert.manualClose}
+			color={alert.type}
+			on:close={() => removeAlert(alert.id)}
 		>
 			<svelte:fragment slot="icon">
-				{#if notification.type === 'green'}
+				{#if alert.type === 'green'}
 					<CheckCircleSolid class="h-5 w-5" />
 					<span class="sr-only">Check icon</span>
 				{/if}
 
-				{#if notification.type === 'red'}
+				{#if alert.type === 'red'}
 					<CloseCircleSolid class="h-5 w-5" />
 					<span class="sr-only">Error icon</span>
 				{/if}
 
-				{#if notification.type === 'orange'}
+				{#if alert.type === 'orange'}
 					<ExclamationCircleSolid class="h-5 w-5" />
 					<span class="sr-only">Warning icon</span>
 				{/if}
 
-				{#if notification.type === 'blue'}
+				{#if alert.type === 'blue'}
 					<InfoCircleSolid class="h-5 w-5" />
 					<span class="sr-only">Info icon</span>
 				{/if}
 			</svelte:fragment>
 
-			{notification.message}
+			{alert.message}
 		</Toast>
 	{/each}
 </div>
