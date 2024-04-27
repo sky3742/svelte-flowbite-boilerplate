@@ -1,6 +1,12 @@
-<script>
-	import { A, Heading, P } from 'flowbite-svelte';
+<script lang="ts">
+	import { TodoList } from '$lib/components/todos';
+	import { Heading } from 'flowbite-svelte';
+
+	export let data;
 </script>
 
-<Heading tag="h1">Welcome to SvelteKit</Heading>
-<P>Visit <A href="https://kit.svelte.dev">kit.svelte.dev</A> to read the documentation</P>
+<div class="m-auto grid max-w-sm gap-6">
+	<Heading tag="h2" class="text-center">Todos</Heading>
+
+	<TodoList todos={data.todos} />
+</div>
