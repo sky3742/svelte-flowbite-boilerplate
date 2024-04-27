@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { TodoFetcher } from '$lib/data/fetchers';
+	import { addNotification } from '$lib/utils/notification';
 	import { Button, Input } from 'flowbite-svelte';
 	import { FireSolid } from 'flowbite-svelte-icons';
 
@@ -10,6 +11,11 @@
 
 		await TodoFetcher.insert(text);
 		form.reset();
+
+		addNotification({
+			type: 'green',
+			message: 'Todo created'
+		});
 	}
 </script>
 
