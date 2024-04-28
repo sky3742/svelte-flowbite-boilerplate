@@ -6,16 +6,10 @@ export class TodoFetcher {
 	static async getAll(fetchApi = fetch, depends?: (dep: string) => void) {
 		depends?.('app:todos');
 
-		const data = await FetchJson<Todo[]>({
+		return await FetchJson<Todo[]>({
 			url: '/api/todos',
 			fetchApi
 		});
-
-		return data.map((todo: Todo) => ({
-			...todo,
-			createdAt: new Date(todo.createdAt),
-			updatedAt: new Date(todo.updatedAt)
-		}));
 	}
 
 	static async insert(text: string, fetchApi = fetch) {
