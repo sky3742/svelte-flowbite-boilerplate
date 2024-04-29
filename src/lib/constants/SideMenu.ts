@@ -1,12 +1,8 @@
 import {
+	ArrowLeftToBracketOutline,
 	ChartPieSolid,
 	ClipboardSolid,
-	FileLinesSolid,
-	InboxSolid,
-	LayersSolid,
-	LockSolid,
-	QuestionCircleSolid,
-	ShoppingBagSolid
+	LockSolid
 } from 'flowbite-svelte-icons';
 import type {
 	LayersSolidEvents,
@@ -27,83 +23,24 @@ const firstSection: MenuItem[] = [
 		label: 'Overview',
 		icon: ChartPieSolid,
 		href: '/#'
-	},
-	{
-		label: 'Pages',
-		icon: FileLinesSolid,
-		submenu: [
-			{
-				label: 'Settings',
-				href: '/#'
-			},
-			{
-				label: 'Kanban',
-				href: '/#'
-			},
-			{
-				label: 'Calendar',
-				href: '/#'
-			}
-		]
-	},
-	{
-		label: 'Sales',
-		icon: ShoppingBagSolid,
-		submenu: [
-			{
-				label: 'Products',
-				href: '/#'
-			},
-			{
-				label: 'Billing',
-				href: '/#'
-			},
-			{
-				label: 'Invoice',
-				href: '/#'
-			}
-		]
-	},
-	{
-		label: 'Messages',
-		icon: InboxSolid,
-		href: '/#'
-	},
-	{
-		label: 'Authentication',
-		icon: LockSolid,
-		submenu: [
-			{
-				label: 'Sign In',
-				href: '/#'
-			},
-			{
-				label: 'Sign Up',
-				href: '/#'
-			},
-			{
-				label: 'Forgot Password',
-				href: '/#'
-			}
-		]
 	}
 ];
 
 const secondSection: MenuItem[] = [
 	{
-		label: 'Docs',
+		label: 'Login',
+		icon: ArrowLeftToBracketOutline,
+		href: '/login'
+	},
+	{
+		label: 'Register',
 		icon: ClipboardSolid,
-		href: '/#'
+		href: '/register'
 	},
 	{
-		label: 'Components',
-		icon: LayersSolid,
-		href: '/#'
-	},
-	{
-		label: 'Help',
-		icon: QuestionCircleSolid,
-		href: '/#'
+		label: 'Forgot Password',
+		icon: LockSolid,
+		href: '/forgot-password'
 	}
 ];
 

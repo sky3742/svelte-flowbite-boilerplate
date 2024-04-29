@@ -1,4 +1,4 @@
-import { ALERT_DURATION_SECOND } from '$lib/constants/Constant';
+import { ALERT_DURATION_SECOND } from '$lib/constants/constant';
 import type { ToastProps } from 'flowbite-svelte/Toast.svelte';
 import { writable } from 'svelte/store';
 import { v4 as uuid } from 'uuid';

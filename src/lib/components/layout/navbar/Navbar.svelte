@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { AppsDropdown, NotificationDropdown, UserMenu } from '$lib/components/common';
+	import { UserMenu } from '$lib/components/common';
 	import { Navbar } from 'flowbite-svelte';
 	import { NavBrand } from '..';
 </script>
@@ -14,8 +14,8 @@
 		</div>
 
 		<div class="flex items-center">
-			<NotificationDropdown />
-			<AppsDropdown />
+			<!-- Buttons align to the right -->
+			<!-- Notification list -->
 			<UserMenu />
 		</div>
 	</NavContainer>
