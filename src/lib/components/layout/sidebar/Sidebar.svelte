@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { SideMenu } from '$lib/constants/sideMenu';
+	import { SideMenu } from '$lib/constants/SideMenu';
 	import {
 		Sidebar,
 		SidebarDropdownItem,

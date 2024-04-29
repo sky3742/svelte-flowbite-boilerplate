@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { APP_LOGO, APP_NAME } from '$lib/constants/constant';
+	import { APP_LOGO, APP_NAME } from '$lib/constants/Constant';
 	import { Button, Checkbox, Input, Label } from 'flowbite-svelte';
 	import { Register, Section } from 'flowbite-svelte-blocks';
 </script>

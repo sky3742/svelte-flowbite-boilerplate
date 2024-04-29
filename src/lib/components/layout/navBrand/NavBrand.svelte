@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { APP_NAME, APP_URL } from '$lib/constants/constant';
+	import { APP_NAME, APP_URL } from '$lib/constants/Constant';
 	import { NavBrand, P } from 'flowbite-svelte';
 	import { AppleSolid as Logo } from 'flowbite-svelte-icons';
 </script>
