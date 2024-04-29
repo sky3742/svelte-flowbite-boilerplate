@@ -1,10 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { LanguageSelector } from '$lib/components/common';
 	import { SideMenu } from '$lib/constants/SideMenu';
 	import {
-		Button,
-		DarkMode,
 		Sidebar,
 		SidebarDropdownItem,
 		SidebarDropdownWrapper,
@@ -12,7 +9,6 @@
 		SidebarItem,
 		SidebarWrapper
 	} from 'flowbite-svelte';
-	import { AdjustmentsVerticalSolid, CogSolid } from 'flowbite-svelte-icons';
 	import { NavBrand } from '..';
 
 	$: activeUrl = $page.url.pathname;
@@ -62,17 +58,7 @@
 		<div
 			class="absolute -left-1 bottom-0 z-20 hidden w-full justify-center space-x-4 bg-white p-4 dark:bg-gray-800 lg:flex"
 		>
-			<DarkMode />
-
-			<Button href="/#" color="alternative" class="border-none p-2">
-				<AdjustmentsVerticalSolid aria-hidden="true" class="h-6 w-6" />
-			</Button>
-
-			<Button href="/#" color="alternative" class="border-none p-2">
-				<CogSolid aria-hidden="true" class="h-6 w-6" />
-			</Button>
-
-			<LanguageSelector />
+			<slot />
 		</div>
 	</SidebarWrapper>
 </Sidebar>
