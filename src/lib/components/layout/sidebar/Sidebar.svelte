@@ -58,7 +58,7 @@
 		<div
 			class="absolute -left-1 bottom-0 z-20 hidden w-full justify-center space-x-4 bg-white p-4 dark:bg-gray-800 lg:flex"
 		>
-			<slot name="bottom" />
+			<slot />
 		</div>
 	</SidebarWrapper>
 </Sidebar>
