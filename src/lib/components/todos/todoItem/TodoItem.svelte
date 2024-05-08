@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { TodoFetcher } from '$lib/data/fetchers';
 	import { type Todo } from '$lib/data/types';
-	import { addNotification } from '$lib/utils/notification';
+	import { addAlert } from '$lib/utils/alert';
 	import { Button, Checkbox, Label, Span } from 'flowbite-svelte';
 	import { TrashBinSolid } from 'flowbite-svelte-icons';
 
@@ -12,7 +12,7 @@
 			...todo,
 			completed: !todo.completed
 		});
-		addNotification({
+		addAlert({
 			type: 'green',
 			message: 'Todo updated'
 		});
@@ -20,7 +20,7 @@
 
 	async function handleDelete() {
 		await TodoFetcher.delete(todo);
-		addNotification({
+		addAlert({
 			type: 'green',
 			message: 'Todo deleted'
 		});

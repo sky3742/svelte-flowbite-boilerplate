@@ -1,5 +1,5 @@
 <script>
-	import { Notifications } from '$lib/components/common';
+	import { Alerts } from '$lib/components/common';
 	import { initFlowbite } from 'flowbite';
 	import { onMount } from 'svelte';
 	import '../app.pcss';
@@ -8,4 +8,4 @@
 </script>
 
 <slot />
-<Notifications />
+<Alerts />
